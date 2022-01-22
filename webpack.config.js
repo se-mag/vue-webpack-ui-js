@@ -22,10 +22,10 @@ const config = {
     historyApiFallback: true,
     // watchFiles: [path.resolve(__dirname, 'src')],
     static: {
-      directory: path.join(__dirname, 'dist'), // public
+      directory: devMode ? path.join(__dirname, 'src') : path.join(__dirname, 'public'),
       watch: true
     },
-    port: 5000, // default 8080
+    port: 5001, // default 8080
     open: true, // quick launch browser
     hot: true, // HMR hot module reloading
     compress: true,
@@ -78,6 +78,7 @@ const config = {
     }),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
+      BASE_URL: '.',
       title: 'Webpack 5 Config for Vue 3',
       filename: 'index.html',
       favicon: 'public/favicon.ico',

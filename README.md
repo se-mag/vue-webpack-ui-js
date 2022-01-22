@@ -3,7 +3,7 @@
 
 ### Quick Start
 ```bash
-ipeer cd vueapp-js
+cd vueapp-js
 yarn init -y
 
 ## vue related
@@ -17,12 +17,7 @@ yarn add -D webpack webpack-cli webpack-dev-server
 yarn add -D @babel/core @babel/preset-env babel-loader
 
 ## Load Sass/SCSS file and compiles it to CSS
-yarn add -D sass-loader sass
-
-## list of loaders
-yarn add -D vue-loader@next
-yarn add -D style-loader css-loader postcss-loader sass-loader
-yarn add -D babel-loader
+yarn add -D style-loader css-loader postcss-loader sass-loader sass
 
 ## plugins
 yarn add -D html-webpack-plugin mini-css-extract-plugin
